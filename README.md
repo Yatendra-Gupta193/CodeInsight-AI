@@ -239,53 +239,102 @@ http://localhost:5173
 
 ## API Overview
 
-### 1. Analyze Repository
+## 1. Analyze Repository
 
 ```http
 GET /github/analyze
 ```
+### Fetches basic information and statistics about a GitHub repository 
 
-Query Parameters:
+### Query Parameters :
 
-```text
-owner
-repo
+| Parameter | Required | Description |
+|---|---|---|
+| Owner | Yes | GitHub username or organization |
+| Repo | Yes | GitHub repository name |
+
+### Example response 
+```
+{
+  "success": true,
+  "data": {
+    "name": "transformers",
+    "fullName": "huggingface/transformers",
+    "description": "Repository description",
+    "stars": 0,
+    "forks": 0,
+    "language": "Python",
+    "owner": "huggingface",
+    "openIssues": 0
+  }
+}
 ```
 
 ---
 
-### 2. Contributors
+## 2. Contributors
 
 ```http
 GET /github/contributors
 ```
+### Fetches contributor information for a repository.
 
-Query Parameters:
+### Query Parameters :
 
-```text
-owner
-repo
+| Parameter | Required | Description |
+|---|---|---|
+| Owner | Yes | GitHub username or organization |
+| Repo | Yes | GitHub repository name |
+
+### Example Response 
+
+```
+{
+  "success": true,
+  "data": [
+    {
+      "id": 123456,
+      "username": "developer",
+      "contributions": 100,
+      "profileUrl": "https://github.com/developer"
+    }
+  ]
+}
 ```
 
 ---
 
-### 3. AI Summary
+## 3. AI Summary
 
 ```http
 GET /github/summary
 ```
 
+### Generates an AI-powered technical summary of the repository using Google Gemini.
 
-Query Parameters:
+### Query Parameters :
 
-```text
-owner
-repo
+| Parameter | Required | Description |
+|---|---|---|
+| Owner | Yes | GitHub username or organization |
+| Repo | Yes | GitHub repository name |
+
+### Example 
+```
+GET /github/summary?owner=huggingface&repo=transformers
+```
+
+### AI Output : The generated summary focuses on
+
+```
+1. Project Overview
+2. Architecture Overview
+3. Key Features
 ```
 
 ---
 
-### 4. Ask Codebase AI
+## 4. Ask Codebase AI
 
 ```http
 POST /repository/ask
@@ -318,18 +367,15 @@ The backend APIs can be tested directly using cURL, Postman, or a browser.
 ### 1. Repository Analysis
 ```
 http://localhost:5000/github/analyze?owner=huggingface&repo=transformers
-
 ```
 ### 2. Contributors 
 ```
 http://localhost:5000/github/contributors?owner=huggingface&repo=transformers
-
 ```
 
 ### 3. AI Repository Summary
 ```
 http://localhost:5000/github/summary?owner=huggingface&repo=transformers
-
 ```
 
 ---
