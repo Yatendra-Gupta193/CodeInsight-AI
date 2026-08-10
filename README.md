@@ -10,9 +10,9 @@ The platform combines **GitHub REST APIs** with **Google Gemini AI** to transfor
 
 ---
 
-## ✨ Features
+# ✨ Features
 
-### 📦 Repository Analysis
+## 📦 Repository Analysis
 
 Analyze public GitHub repositories and view:
 
@@ -25,7 +25,7 @@ Analyze public GitHub repositories and view:
 - Repository creation and update information
 - General repository statistics
 
-### 👥 Contributor Analytics
+## 👥 Contributor Analytics
 
 Explore repository contributors with:
 
@@ -36,7 +36,7 @@ Explore repository contributors with:
 - GitHub profile links
 - Community activity insights
 
-### 🤖 AI Repository Summary
+## 🤖 AI Repository Summary
 
 Generate an AI-powered technical summary containing:
 
@@ -46,7 +46,7 @@ Generate an AI-powered technical summary containing:
 
 This helps developers understand an unfamiliar repository without manually going through the entire project.
 
-### 💬 AI Codebase Q&A
+## 💬 AI Codebase Q&A
 
 Ask natural-language questions about a repository.
 
@@ -62,7 +62,7 @@ Example questions:
 
 The system uses repository context and Gemini AI to generate context-aware answers.
 
-### 🔗 Public GitHub Repository Support
+## 🔗 Public GitHub Repository Support
 
 The application is designed to analyze public GitHub repositories without requiring users to manually clone them locally.
 
@@ -195,7 +195,7 @@ cd server
 npm install
 ```
 
-### Backend (`backend/.env.example`)
+### Backend (`server/.env.example`)
 
 ```.env
 PORT=5000
@@ -215,10 +215,11 @@ npm start
 ## 4. Frontend Setup
 
 ```bash
+cd client
 npm install
 ```
 
-### Frontend (`frontend/.env.example`)
+### Frontend (`client/.env.example`)
 ```env
 VITE_API_URL=your_server_url
 ```
@@ -237,7 +238,7 @@ http://localhost:5173
 
 ---
 
-## API Overview
+# API Overview
 
 ## 1. Analyze Repository
 
