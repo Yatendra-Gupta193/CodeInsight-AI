@@ -1,0 +1,27 @@
+{
+  "hosting": [
+    {
+      "site": "codeinsight",
+      "public": "dist",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    },
+    {
+      "site": "codeinsight-happykumar",
+      "public": "dist",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "redirects": [
+        {
+          "source": "**",
+          "destination": "https://codeinsight.web.app",
+          "type": 301
+        }
+      ]
+    }
+  ]
+}

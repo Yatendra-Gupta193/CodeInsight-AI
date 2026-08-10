@@ -1,0 +1,7 @@
+.env
+/repositories
+node_modules
+.agents
+functions
+.firebaserc
+firebase-debug.log
