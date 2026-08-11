@@ -2,7 +2,7 @@
 
 ---
 
-# 🚀 CodeInsight AI
+# 🚀 CodeInsight AI 
 
 > **AI-Powered GitHub Repository Intelligence Platform**
 
